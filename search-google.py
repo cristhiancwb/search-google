@@ -59,7 +59,6 @@ def main():
     args = parse_args()
     br = start_browser()
     if not args.search:
-        sys.exit("[!] Enter a term or phrase to search with the -s option: -s 'dan mcinerney'")
     search_term = args.search
     pages = args.pages
 
