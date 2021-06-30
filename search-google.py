@@ -20,6 +20,7 @@ def parse_args():
     return parser.parse_args()
 
 def start_browser():
+    br = webdriver.Firefox(executable_path=f"C:\geckodriver\geckodriver.exe")
     br.implicitly_wait(10)
     return br
 
@@ -58,6 +59,7 @@ def main():
     args = parse_args()
     br = start_browser()
     if not args.search:
+        sys.exit("[!] Enter a term or phrase to search with the -s option: -s 'distribuidoras de bebidas'")
     search_term = args.search
     pages = args.pages
 
